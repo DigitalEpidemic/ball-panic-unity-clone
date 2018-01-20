@@ -3,7 +3,46 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - FirstArrow
+  - SecondArrow
+  - FirstStickyArrow
+  - InGameCollectable
+  - Watch
+  - SandWatch
+  - Dynamite
+  - Shield
+  - Coin
+  - SingleArrow
+  - DoubleArrow
+  - SingleStickyArrow
+  - DoubleStickyArrow
+  - UnbreakableBrickBottom
+  - UnbreakableBrickTop
+  - UnbreakableBrickLeft
+  - UnbreakableBrickRight
+  - UnbreakableBrickTopVertical
+  - UnbreakableBrickBottomVertical
+  - UnbreakableBrickLeftVertical
+  - UnbreakableBrickRightVertical
+  - BrokenBrickTop
+  - BrokenBrickBottom
+  - BrokenBrickLeft
+  - BrokenBrickRight
+  - LargestBall
+  - LargeBall
+  - MediumBall
+  - SmallBall
+  - SmallestBall
+  - GoldBall
+  - TopBrick
+  - BottomBrick
+  - LeftBrick
+  - RightBrick
+  - MoveLeftButton
+  - MoveRightButton
+  - ShootButton
+  - SecondStickyArrow
   layers:
   - Default
   - TransparentFX
@@ -13,12 +52,12 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Arrow
+  - CollectableItem
+  - GameBGBrick
+  - Ball
+  - GameplayBricks
   - 
   - 
   - 
@@ -40,4 +79,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Gameplay Canvas
+    uniqueID: 258935761
+    locked: 0
+  - name: BG Bricks
+    uniqueID: 3453907441
+    locked: 0
+  - name: ArrowsAndBalls
+    uniqueID: 3151120599
+    locked: 0
+  - name: Player
+    uniqueID: 4154490833
+    locked: 0
+  - name: PauseMenu
+    uniqueID: 3624923453
     locked: 0
