@@ -152,6 +152,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114103163118351786, guid: 5cffba7286d633344877fd3a1492cd91,
+        type: 2}
+      propertyPath: myRigidBody
+      value: 
+      objectReference: {fileID: 846038036}
+    - target: {fileID: 114103163118351786, guid: 5cffba7286d633344877fd3a1492cd91,
+        type: 2}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 846038037}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5cffba7286d633344877fd3a1492cd91, type: 2}
   m_IsPrefabParent: 0
@@ -236,6 +246,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &846038036 stripped
+Rigidbody2D:
+  m_PrefabParentObject: {fileID: 50652427835271020, guid: 5cffba7286d633344877fd3a1492cd91,
+    type: 2}
+  m_PrefabInternal: {fileID: 28327684}
+--- !u!95 &846038037 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95366363666743678, guid: 5cffba7286d633344877fd3a1492cd91,
+    type: 2}
+  m_PrefabInternal: {fileID: 28327684}
 --- !u!1001 &1239400105
 Prefab:
   m_ObjectHideFlags: 0
