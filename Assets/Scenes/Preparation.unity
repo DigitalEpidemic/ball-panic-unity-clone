@@ -162,6 +162,21 @@ Prefab:
       propertyPath: animator
       value: 
       objectReference: {fileID: 846038037}
+    - target: {fileID: 50652427835271020, guid: 5cffba7286d633344877fd3a1492cd91,
+        type: 2}
+      propertyPath: m_Mass
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50652427835271020, guid: 5cffba7286d633344877fd3a1492cd91,
+        type: 2}
+      propertyPath: m_LinearDrag
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 50652427835271020, guid: 5cffba7286d633344877fd3a1492cd91,
+        type: 2}
+      propertyPath: m_GravityScale
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5cffba7286d633344877fd3a1492cd91, type: 2}
   m_IsPrefabParent: 0
