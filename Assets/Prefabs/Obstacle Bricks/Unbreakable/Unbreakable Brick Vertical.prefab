@@ -25,7 +25,7 @@ GameObject:
   m_TagString: UnbreakableBrickTopVertical
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1607997177294530
 GameObject:
@@ -41,7 +41,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1673819013975910
 GameObject:
@@ -57,7 +57,7 @@ GameObject:
   m_TagString: UnbreakableBrickBottomVertical
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1976551568081906
 GameObject:
@@ -73,7 +73,7 @@ GameObject:
   m_TagString: UnbreakableBrickLeftVertical
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1996610676739260
 GameObject:
@@ -89,7 +89,7 @@ GameObject:
   m_TagString: UnbreakableBrickRightVertical
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4089725065777618
 Transform:
