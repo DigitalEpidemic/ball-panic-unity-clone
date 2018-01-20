@@ -53,6 +53,7 @@ GameObject:
   - component: {fileID: 4727968964298760}
   - component: {fileID: 50465862008559296}
   - component: {fileID: 61195092871470696}
+  - component: {fileID: 114902235509625086}
   m_Layer: 9
   m_Name: Arrow1
   m_TagString: FirstArrow
@@ -399,7 +400,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1168187036962678}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: 0, z: 0}
+  m_LocalPosition: {x: 3.78011, y: -6.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4093510151352854}
@@ -460,7 +461,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -6.937787}
@@ -476,6 +477,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.15, y: 15.282007}
   m_EdgeRadius: 0
+--- !u!114 &114902235509625086
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1168187036962678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0073bf4b1869f5f4b9e00d85d2e7e4fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212021584021461792
 SpriteRenderer:
   m_ObjectHideFlags: 1

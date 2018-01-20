@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 95024071800395828}
   - component: {fileID: 50655622179673734}
   - component: {fileID: 61615801948286666}
+  - component: {fileID: 114223643954849322}
   m_Layer: 8
   m_Name: Zombie
   m_TagString: Player
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1518346627607686}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.8597367, y: -6.5741935, z: 0}
+  m_LocalPosition: {x: -6.3530025, y: -2.577045, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -105,6 +106,26 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114223643954849322
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1518346627607686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 082101ca3c3ff654abec9c748c7839a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myRigidBody: {fileID: 50655622179673734}
+  animator: {fileID: 95024071800395828}
+  arrows:
+  - {fileID: 1168187036962678, guid: 3aeb4117017831b4c8446d9582912a4a, type: 2}
+  - {fileID: 1124737310339852, guid: 0e0e4421a0f4b9d44aeee3684bd76d3b, type: 2}
+  - {fileID: 1684430941426418, guid: a7a233340dafefc44b5ba69f8265f18a, type: 2}
+  - {fileID: 1077818918026310, guid: 87bc67d75a0f5c94ea9f87b7c954290a, type: 2}
+  clip: {fileID: 7400000, guid: 7ffdecf4377b1d84ca07ddb91a01ba63, type: 2}
+  shootClip: {fileID: 8300000, guid: 535bbe5217e959f46b82c48f0ac9f465, type: 3}
 --- !u!212 &212763724010662242
 SpriteRenderer:
   m_ObjectHideFlags: 1
