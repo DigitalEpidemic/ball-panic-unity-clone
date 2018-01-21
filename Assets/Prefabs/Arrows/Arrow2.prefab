@@ -53,6 +53,7 @@ GameObject:
   - component: {fileID: 4723441385689858}
   - component: {fileID: 50003116652484110}
   - component: {fileID: 61804027055481122}
+  - component: {fileID: 114154491043276024}
   m_Layer: 9
   m_Name: Arrow2
   m_TagString: SecondArrow
@@ -460,7 +461,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -6.937787}
@@ -476,6 +477,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.15, y: 15.282007}
   m_EdgeRadius: 0
+--- !u!114 &114154491043276024
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1124737310339852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0073bf4b1869f5f4b9e00d85d2e7e4fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212137176894599190
 SpriteRenderer:
   m_ObjectHideFlags: 1
