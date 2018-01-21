@@ -24,6 +24,12 @@ public class ArrowScript : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D target) {
+		// If the arrow hits a ball
+		if (target.tag == "LargestBall" || target.tag == "LargeBall" || target.tag == "MediumBall" || target.tag == "SmallBall" || target.tag == "SmallestBall") {
+			gameObject.SetActive (false);
+		}
+
+		// If the arrow hits the top brick
 		if (target.tag == "TopBrick") {
 			gameObject.SetActive (false);
 		}
