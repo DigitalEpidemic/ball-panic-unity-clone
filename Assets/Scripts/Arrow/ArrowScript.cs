@@ -108,6 +108,9 @@ public class ArrowScript : MonoBehaviour {
 		} // If the arrow hits the top brick or an unbreakable brick
 
 		if (target.tag == "BrokenBrickTop" || target.tag == "BrokenBrickBottom" || target.tag == "BrokenBrickLeft" || target.tag == "BrokenBrickRight") {
+			BrickScript brick = target.gameObject.GetComponentInParent<BrickScript> ();
+			brick.StartCoroutine (brick.BreakTheBrick ());
+
 			if (gameObject.tag == "FirstArrow" || gameObject.tag == "FirstStickyArrow") {
 				PlayerScript.instance.PlayerShootOnce (true);
 			} else if (gameObject.tag == "SecondArrow" || gameObject.tag == "SecondStickyArrow") {

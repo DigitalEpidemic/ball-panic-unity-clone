@@ -123,14 +123,24 @@ public class BallScript : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D target) {
-
-		// If the ball hits the arrow
 		if (target.tag == "FirstArrow" || target.tag == "SecondArrow" || target.tag == "FirstStickyArrow" || target.tag == "SecondStickyArrow") {
 			if (gameObject.tag != "SmallestBall") {
 				InitializeBallsAndTurnOffCurrentBall ();
 			} else {
 				gameObject.SetActive (false);
 			}
+		} // If the ball hits the arrow
+
+		if (target.tag == "UnbreakableBrickTop" || target.tag == "BrokenBrickTop" || target.tag == "UnbreakableBrickTopVertical") {
+			myRigidBody.velocity = new Vector2 (0, 5);
+		} else if (target.tag == "UnbreakableBrickBottom" || target.tag == "BrokenBrickBottom" || target.tag == "UnbreakableBrickBottomVertical") {
+			myRigidBody.velocity = new Vector2 (0, -2);
+		} else if (target.tag == "UnbreakableBrickLeft" || target.tag == "BrokenBrickLeft" || target.tag == "UnbreakableBrickLeftVertical") {
+			moveLeft = true;
+			moveRight = false;
+		} else if (target.tag == "UnbreakableBrickRight" || target.tag == "BrokenBrickRight" || target.tag == "UnbreakableBrickRightVertical") {
+			moveRight = true;
+			moveLeft = false;
 		}
 
 		// If it hits any of the bricks

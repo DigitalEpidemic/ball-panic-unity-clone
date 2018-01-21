@@ -53,6 +53,7 @@ GameObject:
   - component: {fileID: 4659074392515686}
   - component: {fileID: 212597491704013226}
   - component: {fileID: 95183139530576162}
+  - component: {fileID: 114719793108427998}
   m_Layer: 0
   m_Name: Breakable Brick Horizontal
   m_TagString: Untagged
@@ -125,7 +126,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1503420031109962}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.11, y: -2.03, z: 0}
+  m_LocalPosition: {x: -1.0687509, y: 0.14815205, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4945971640741962}
@@ -278,6 +279,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114719793108427998
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1503420031109962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3513e9147b7a07f458f8f748d5a50ffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 95183139530576162}
+  clip: {fileID: 7400000, guid: 1e5207bf9d6f67e4aa7cdd25e08d3364, type: 2}
 --- !u!212 &212597491704013226
 SpriteRenderer:
   m_ObjectHideFlags: 1
