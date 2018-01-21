@@ -4,18 +4,29 @@ using UnityEngine;
 
 public class ArrowScript : MonoBehaviour {
 
-	private float arrowSpeed = 4.0f;
+	private float arrowSpeed = 7.0f;
 	private bool canShootStickyArrow;
 
-	// Use this for initialization
+	[SerializeField]
+	private AudioClip clip;
+
 	void Start () {
 		canShootStickyArrow = true;
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
-		ShootArrow ();
-	}
+		if (this.gameObject.tag == "FirstStickyArrow") {
+			if (canShootStickyArrow) {
+				ShootArrow ();
+			}
+		} else if (gameObject.tag == "SecondStickyArrow") {
+			if (canShootStickyArrow) {
+				ShootArrow ();
+			}
+		} else {
+			ShootArrow ();
+		}
+	} // Update
 
 	void ShootArrow () {
 		Vector3 temp = transform.position;
@@ -23,20 +34,80 @@ public class ArrowScript : MonoBehaviour {
 		transform.position = temp;
 	}
 
+	IEnumerator ResetStickyArrow () {
+		yield return new WaitForSeconds (2.5f);
+
+		if (this.gameObject.tag == "FirstStickyArrow") {
+			PlayerScript.instance.PlayerShootOnce (true);
+			this.gameObject.SetActive (false);
+
+		} else if (this.gameObject.tag == "SecondStickyArrow") {
+			PlayerScript.instance.PlayerShootTwice (true);
+			this.gameObject.SetActive (false);
+		}
+	}
+
 	void OnTriggerEnter2D (Collider2D target) {
-		// If the arrow hits a ball
 		if (target.tag == "LargestBall" || target.tag == "LargeBall" || target.tag == "MediumBall" || target.tag == "SmallBall" || target.tag == "SmallestBall") {
 			if (gameObject.tag == "FirstArrow" || gameObject.tag == "FirstStickyArrow") {
 				PlayerScript.instance.PlayerShootOnce (true);
 			} else if (gameObject.tag == "SecondArrow" || gameObject.tag == "SecondStickyArrow") {
 				PlayerScript.instance.PlayerShootTwice (true);
 			}
-
 			gameObject.SetActive (false);
-		}
+		} // If the arrow hits a ball
+			
+		if (target.tag == "TopBrick" || target.tag == "UnbreakableBrickTop" || target.tag == "UnbreakableBrickBottom"
+			|| target.tag == "UnbreakableBrickLeft" || target.tag == "UnbreakableBrickRight"
+			|| target.tag == "UnbreakableBrickBottomVertical") {
 
-		// If the arrow hits the top brick
-		if (target.tag == "TopBrick") {
+			if (this.gameObject.tag == "FirstArrow") {
+				PlayerScript.instance.PlayerShootOnce (true);
+				this.gameObject.SetActive (false);
+			} else if (this.gameObject.tag == "SecondArrow") {
+				PlayerScript.instance.PlayerShootTwice (true);
+				this.gameObject.SetActive (false);
+			}
+
+			if (this.gameObject.tag == "FirstStickyArrow") {
+				canShootStickyArrow = false;
+				Vector3 targetPos = target.transform.position;
+				Vector3 temp = transform.position;
+
+				if (target.tag == "TopBrick") {
+					targetPos.y -= 0.989f;
+				} else if (target.tag == "UnbreakableBrickTop" || target.tag == "UnbreakableBrickBottom" || target.tag == "UnbreakableBrickLeft" || target.tag == "UnbreakableBrickRight") {
+					targetPos.y -= 0.75f;
+				} else if (target.tag == "UnbreakableBrickBottomVertical") {
+					targetPos.y -= 0.97f;
+				}
+					
+				temp.y = targetPos.y;
+				transform.position = temp;
+				AudioSource.PlayClipAtPoint (clip, transform.position);
+				StartCoroutine ("ResetStickyArrow");
+
+			} else if (this.gameObject.tag == "SecondStickyArrow") {
+				canShootStickyArrow = false;
+				Vector3 targetPos = target.transform.position;
+				Vector3 temp = transform.position;
+
+				if (target.tag == "TopBrick") {
+					targetPos.y -= 0.989f;
+				} else if (target.tag == "UnbreakableBrickTop" || target.tag == "UnbreakableBrickBottom" || target.tag == "UnbreakableBrickLeft" || target.tag == "UnbreakableBrickRight") {
+					targetPos.y -= 0.75f;
+				} else if (target.tag == "UnbreakableBrickBottomVertical") {
+					targetPos.y -= 0.97f;
+				}
+
+				temp.y = targetPos.y;
+				transform.position = temp;
+				AudioSource.PlayClipAtPoint (clip, transform.position);
+				StartCoroutine ("ResetStickyArrow");
+			}
+		} // If the arrow hits the top brick or an unbreakable brick
+
+		if (target.tag == "BrokenBrickTop" || target.tag == "BrokenBrickBottom" || target.tag == "BrokenBrickLeft" || target.tag == "BrokenBrickRight") {
 			if (gameObject.tag == "FirstArrow" || gameObject.tag == "FirstStickyArrow") {
 				PlayerScript.instance.PlayerShootOnce (true);
 			} else if (gameObject.tag == "SecondArrow" || gameObject.tag == "SecondStickyArrow") {
@@ -44,7 +115,7 @@ public class ArrowScript : MonoBehaviour {
 			}
 
 			gameObject.SetActive (false);
-		}
-	}
+		} // If the arrow hits a broken brick
+	} // OnTriggerEnter2D
 
 } // ArrowScript
