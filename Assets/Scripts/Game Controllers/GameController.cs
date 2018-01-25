@@ -10,7 +10,7 @@ public class GameController : MonoBehaviour {
 	public static GameController instance;
 	private GameData data;
 
-	public int currentLevel;
+	public int currentLevel = -1;
 	public int currentScore;
 
 	public bool isGameStartedFirstTime;
