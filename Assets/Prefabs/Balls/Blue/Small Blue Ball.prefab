@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212715030512653442}
   - component: {fileID: 50094244040786016}
   - component: {fileID: 58964274733148768}
+  - component: {fileID: 114926707707767598}
   m_Layer: 12
   m_Name: Small Blue Ball
   m_TagString: SmallBall
@@ -71,12 +72,31 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.13
+--- !u!114 &114926707707767598
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1313915863479550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c0d2ef0d48f7d64695b7a53c7a95a72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveLeft: 0
+  moveRight: 0
+  myRigidBody: {fileID: 50094244040786016}
+  originalBall: {fileID: 1609125046917218, guid: 3ad237d5c420e824eb7dc81ccab6035a,
+    type: 2}
+  popSounds:
+  - {fileID: 8300000, guid: 6672b090df648fc45812424617f24444, type: 3}
+  - {fileID: 8300000, guid: 3c68c56f100ba604fb32eb553d274a91, type: 3}
 --- !u!212 &212715030512653442
 SpriteRenderer:
   m_ObjectHideFlags: 1

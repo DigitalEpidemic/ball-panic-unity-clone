@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212730026696545178}
   - component: {fileID: 50974218223646398}
   - component: {fileID: 58558611662499770}
+  - component: {fileID: 114222378151089338}
   m_Layer: 12
   m_Name: Medium Green Ball
   m_TagString: MediumBall
@@ -71,12 +72,31 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.13
+--- !u!114 &114222378151089338
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1255631833377564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c0d2ef0d48f7d64695b7a53c7a95a72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveLeft: 0
+  moveRight: 0
+  myRigidBody: {fileID: 50974218223646398}
+  originalBall: {fileID: 1610708243168572, guid: 72f7d125608a94e4099461dd3a0b9689,
+    type: 2}
+  popSounds:
+  - {fileID: 8300000, guid: 6672b090df648fc45812424617f24444, type: 3}
+  - {fileID: 8300000, guid: 3c68c56f100ba604fb32eb553d274a91, type: 3}
 --- !u!212 &212730026696545178
 SpriteRenderer:
   m_ObjectHideFlags: 1

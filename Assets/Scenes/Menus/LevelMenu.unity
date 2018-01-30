@@ -4285,16 +4285,16 @@ RectTransform:
   m_GameObject: {fileID: 439149396}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0000799, y: 1.0000799, z: 1.0000799}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 945865302}
   m_Father: {fileID: 238606160}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -25.000479}
-  m_SizeDelta: {x: -430, y: -230}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -25}
+  m_SizeDelta: {x: 860, y: 490}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &439149398
 MonoBehaviour:
@@ -6089,6 +6089,10 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1501503868}
+    - target: {fileID: 1887201776402798, guid: 55b7bf15029ccfe41b37eef28d933a02, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55b7bf15029ccfe41b37eef28d933a02, type: 2}
   m_IsPrefabParent: 0
@@ -7555,7 +7559,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 825, y: 0}
+  m_AnchoredPosition: {x: 820, y: 0}
   m_SizeDelta: {x: 2500, y: 490}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &945865303

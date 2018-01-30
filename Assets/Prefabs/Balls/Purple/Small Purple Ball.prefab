@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212601332523099186}
   - component: {fileID: 50935870608796210}
   - component: {fileID: 58189596842792862}
+  - component: {fileID: 114715569422381076}
   m_Layer: 12
   m_Name: Small Purple Ball
   m_TagString: SmallBall
@@ -71,12 +72,31 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.13
+--- !u!114 &114715569422381076
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1059086997982272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c0d2ef0d48f7d64695b7a53c7a95a72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveLeft: 0
+  moveRight: 0
+  myRigidBody: {fileID: 50935870608796210}
+  originalBall: {fileID: 1394369035851226, guid: dae3e9db1ba64864897c582ffadda2d0,
+    type: 2}
+  popSounds:
+  - {fileID: 8300000, guid: 6672b090df648fc45812424617f24444, type: 3}
+  - {fileID: 8300000, guid: 3c68c56f100ba604fb32eb553d274a91, type: 3}
 --- !u!212 &212601332523099186
 SpriteRenderer:
   m_ObjectHideFlags: 1

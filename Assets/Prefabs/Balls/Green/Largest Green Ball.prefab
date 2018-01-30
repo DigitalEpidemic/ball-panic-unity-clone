@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212367503428676734}
   - component: {fileID: 50498069626789316}
   - component: {fileID: 58953883064021012}
+  - component: {fileID: 114498285451412056}
   m_Layer: 12
   m_Name: Largest Green Ball
   m_TagString: LargestBall
@@ -71,12 +72,31 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.13
+--- !u!114 &114498285451412056
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1381883911634636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c0d2ef0d48f7d64695b7a53c7a95a72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveLeft: 0
+  moveRight: 0
+  myRigidBody: {fileID: 50498069626789316}
+  originalBall: {fileID: 1660332013273000, guid: c18b72a9a8996e346b7005bf91ece97c,
+    type: 2}
+  popSounds:
+  - {fileID: 8300000, guid: 6672b090df648fc45812424617f24444, type: 3}
+  - {fileID: 8300000, guid: 3c68c56f100ba604fb32eb553d274a91, type: 3}
 --- !u!212 &212367503428676734
 SpriteRenderer:
   m_ObjectHideFlags: 1
