@@ -30,6 +30,8 @@ public class PlayerScript : MonoBehaviour {
 
 	private bool shootOnce, shootTwice;
 
+	private bool moveLeft, moveRight;
+
 	void Awake () {
 		if (instance == null) {
 			instance = this;
@@ -85,6 +87,10 @@ public class PlayerScript : MonoBehaviour {
 		yield return new WaitForSeconds (clip.length);
 		animator.SetBool ("Shoot", false);
 		canWalk = true;
+	}
+
+	public void StopMoving () {
+		moveLeft = moveRight = false;
 	}
 
 	void PlayerWalkKeyboard () {

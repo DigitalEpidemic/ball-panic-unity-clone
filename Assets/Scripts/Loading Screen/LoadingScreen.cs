@@ -7,10 +7,14 @@ public class LoadingScreen : MonoBehaviour {
 	public static LoadingScreen instance;
 
 	[SerializeField]
-	GameObject bgImage, logoImage, text;
+	GameObject bgImage, logoImage, text, fadePanel;
+
+	[SerializeField]
+	Animator fadeAnim;
 
 	void Awake () {
 		MakeSingleton ();
+		Hide ();
 	}
 	
 	void MakeSingleton () {
@@ -26,12 +30,34 @@ public class LoadingScreen : MonoBehaviour {
 		StartCoroutine (ShowLoadingScreen ());
 	}
 
+	public void PlayFadeInAnimation () {
+		StartCoroutine (FadeIn ());
+	}
+
+	IEnumerator FadeIn () {
+		yield return StartCoroutine (MyCoroutine.WaitForRealSeconds (0.4f));
+
+		if (GameplayController.instance != null) {
+			GameplayController.instance.setHasLevelStarted (true);
+		}
+
+		yield return StartCoroutine (MyCoroutine.WaitForRealSeconds (0.9f));
+		fadePanel.SetActive (false);
+	}
+
+	public void FadeOut () {
+		fadePanel.SetActive (true);
+		fadeAnim.Play ("FadeOut");
+	}
+
 	IEnumerator ShowLoadingScreen () {
 		Show ();
-		yield return new WaitForSeconds (1f);
+		yield return StartCoroutine (MyCoroutine.WaitForRealSeconds (1f));
 		Hide ();
 
-		// Call Gameplay controller to begin game
+		if (GameplayController.instance != null) {
+			GameplayController.instance.setHasLevelStarted (true);
+		}
 	}
 
 	void Show () {

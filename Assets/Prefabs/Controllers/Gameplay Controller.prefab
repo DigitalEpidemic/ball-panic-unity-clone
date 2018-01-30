@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1727151453547046}
+  m_IsPrefabParent: 1
+--- !u!1 &1727151453547046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4453359189237690}
+  - component: {fileID: 114543821931295188}
+  m_Layer: 0
+  m_Name: Gameplay Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4453359189237690
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1727151453547046}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114543821931295188
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1727151453547046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 567c1f336acb3a0418cb0aab055d7de9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topAndBottomBricks:
+  - {fileID: 1767832146105144, guid: fd0e42d6d06929d4087e2ba75f84c853, type: 2}
+  - {fileID: 1930740597712460, guid: 85ef44ac6c9f1ea4fabf22b9d137fdf2, type: 2}
+  - {fileID: 1212844035494090, guid: ab8e6e300c65bfb489101fcc337cbd99, type: 2}
+  leftBricks:
+  - {fileID: 1529904196583004, guid: a9aeec8d3bee0264aaf90f62702f26be, type: 2}
+  - {fileID: 1397206338891100, guid: 3ce1cdc0c4d96694b8d540cb72db4880, type: 2}
+  - {fileID: 1956756289919666, guid: fc57b26ce2729d1449eb0f03604d7856, type: 2}
+  rightBricks:
+  - {fileID: 1935181904990654, guid: dfc2274fa9fd532499073b93a144d024, type: 2}
+  - {fileID: 1599489879156952, guid: 7d6782d6010dcf8429d6f876bc4f3fb1, type: 2}
+  - {fileID: 1910831610603418, guid: 501b777846cc8c248994af336ba50e5d, type: 2}
+  panelBG: {fileID: 0}
+  levelFinishedPanel: {fileID: 0}
+  playerDiedPanel: {fileID: 0}
+  pausePanel: {fileID: 0}
+  players:
+  - {fileID: 1585697989972960, guid: 5cffba7286d633344877fd3a1492cd91, type: 2}
+  - {fileID: 1645896256136504, guid: 9f336aff53660ab4ea1da0aa8e0fd25d, type: 2}
+  - {fileID: 1518346627607686, guid: a1609fba6ff678e469c5997adcfd5a86, type: 2}
+  - {fileID: 1289779703555772, guid: d338a308bd3872649bb0d97369f7f62d, type: 2}
+  - {fileID: 1262522318444666, guid: 023624a7ba7ec634baa3709911527e17, type: 2}
+  - {fileID: 1199317679444926, guid: ff08a44d28d7d314c8d3e1fb462cfa03, type: 2}
+  levelTime: 0
+  liveText: {fileID: 0}
+  scoreText: {fileID: 0}
+  levelTimerText: {fileID: 0}
+  showScoreAtTheEndOfLevelText: {fileID: 0}
+  countDownAndBeginLevelText: {fileID: 0}
+  watchVideoText: {fileID: 0}
+  playerLives: 0
+  playerScore: 0
+  coins: 0
+  endOfLevelRewards:
+  - {fileID: 1952335297537952, guid: 4988c1250134ba949902e146605b3404, type: 2}
+  - {fileID: 1159520991716418, guid: a0ab260afd88e844cbe8238c9545c66d, type: 2}
+  - {fileID: 1138851568779456, guid: 131c3b9d064aa61439f66325b239cd06, type: 2}
+  - {fileID: 1539570813748566, guid: 02e8688bd62ceb84e8184415aa96ffbf, type: 2}
+  - {fileID: 1975671415115628, guid: 1df6850244f70a04386f470558168ea1, type: 2}
+  - {fileID: 1392199054599230, guid: 7fcb22c421382d94dac2be4cdfc79035, type: 2}
+  - {fileID: 1542481916953934, guid: 41515c6faa3652a43869b84a534322fc, type: 2}
+  - {fileID: 1845772671572984, guid: d1ab32db7577a8e46bb67b4de9544a4e, type: 2}
+  - {fileID: 1572412922972492, guid: 96be3172fa545804b8686a35b5dc2c74, type: 2}
+  - {fileID: 1039422245403066, guid: 9d7bc45c29a60fa47ab30f6781bf988f, type: 2}
+  - {fileID: 1559354291214612, guid: 18cb068bc4566424291c781c58d88a7d, type: 2}
+  - {fileID: 1456031824978960, guid: 123c5056870ebe1488bbb86781434bc1, type: 2}
+  - {fileID: 1198993904219724, guid: 656655fde4e6fd84ab8fca51346dad13, type: 2}
+  - {fileID: 1080234363715588, guid: 0994ee2dcc4d449499130516d241c0dd, type: 2}
+  - {fileID: 1183877618862610, guid: 17c2f0377cf05034fa8df5889302a348, type: 2}
+  - {fileID: 1641855079837282, guid: 80f4712eb8150f0488b946d484f363c9, type: 2}
+  - {fileID: 1998931452871840, guid: ff4a2ea75cd7fdb4c850f7687052eb12, type: 2}
+  - {fileID: 1906448683514984, guid: 2b95dea1ee5b3db4b9b1b83f26837600, type: 2}
+  - {fileID: 1264844389024844, guid: 5c5b46dded1151a4d97f4630375dfdb2, type: 2}
+  - {fileID: 1721099831322868, guid: 2488d198a0a806c45ba02c141a926060, type: 2}
+  - {fileID: 1153131941174300, guid: 358cebcd02811a7498545101ced8caa2, type: 2}
+  - {fileID: 1808580927306148, guid: 5fd624a1a2d786c43a491d53b3a11e3d, type: 2}
+  - {fileID: 1446972447808192, guid: b2068c61ccab63f4882811768ebe3598, type: 2}
+  - {fileID: 1715632658826156, guid: 902e152882cda3a40bf018b23c83f53d, type: 2}
+  - {fileID: 1011541502899676, guid: d06ae8b3ba8af6f4da31f1c4bcf46a90, type: 2}
+  - {fileID: 1675658097304618, guid: 5ff89757083e44e4589093a2aba1c3bf, type: 2}
+  - {fileID: 1567462436402386, guid: 5677996cd37146b4786c4292e0600fb4, type: 2}
+  - {fileID: 1861981583558272, guid: ad1cfcba55b578643958439e3c11ec72, type: 2}
+  - {fileID: 1706502654135822, guid: 88fe058e9450123488a6f3eb54ae2b6e, type: 2}
+  - {fileID: 1130541537404826, guid: 3f310a0a37a704e4f819b8f1f8c5c73a, type: 2}
+  - {fileID: 1119483067449756, guid: 34eb585872fc242488e29bf45a7bca6c, type: 2}
+  - {fileID: 1914991179341664, guid: 40599a0e97fd2a84a8f76e73fdb7a712, type: 2}
+  - {fileID: 1183877618862610, guid: 17c2f0377cf05034fa8df5889302a348, type: 2}
+  - {fileID: 1153131941174300, guid: 358cebcd02811a7498545101ced8caa2, type: 2}
+  - {fileID: 1159520991716418, guid: a0ab260afd88e844cbe8238c9545c66d, type: 2}
+  - {fileID: 1198993904219724, guid: 656655fde4e6fd84ab8fca51346dad13, type: 2}
+  - {fileID: 1975671415115628, guid: 1df6850244f70a04386f470558168ea1, type: 2}
+  - {fileID: 1572412922972492, guid: 96be3172fa545804b8686a35b5dc2c74, type: 2}
+  - {fileID: 1392199054599230, guid: 7fcb22c421382d94dac2be4cdfc79035, type: 2}
+  - {fileID: 1998931452871840, guid: ff4a2ea75cd7fdb4c850f7687052eb12, type: 2}
+  pauseBtn: {fileID: 0}

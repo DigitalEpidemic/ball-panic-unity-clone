@@ -12,9 +12,12 @@ public class GameController : MonoBehaviour {
 
 	public int currentLevel = -1;
 	public int currentScore;
+	public int currentLives;
 
+	public bool isGameStartedFromLevelMenu;
 	public bool isGameStartedFirstTime;
 	public bool isMusicOn;
+	public bool doubleCoins;
 
 	public int selectedPlayer;
 	public int selectedWeapon;
@@ -182,6 +185,7 @@ class GameData {
 	
 	private bool isGameStartedFirstTime;
 	private bool isMusicOn;
+	private bool doubleCoins;
 
 	private int selectedPlayer;
 	private int selectedWeapon;
@@ -196,6 +200,15 @@ class GameData {
 
 
 	// Getters and Setters
+
+	public bool DoubleCoins {
+		get {
+			return this.doubleCoins;
+		}
+		set {
+			doubleCoins = value;
+		}
+	}
 
 	public bool IsGameStartedFirstTime {
 		get {
