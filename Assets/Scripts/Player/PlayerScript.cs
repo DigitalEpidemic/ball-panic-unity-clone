@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour {
 
@@ -32,6 +33,8 @@ public class PlayerScript : MonoBehaviour {
 
 	private bool moveLeft, moveRight;
 
+	private Button shootBtn;
+
 	void Awake () {
 		if (instance == null) {
 			instance = this;
@@ -43,6 +46,9 @@ public class PlayerScript : MonoBehaviour {
 
 		shootOnce = true;
 		shootTwice = true;
+
+		shootBtn = GameObject.FindGameObjectWithTag ("ShootButton").GetComponent<Button> ();
+		shootBtn.onClick.AddListener (() => ShootTheArrow ());
 	}
 
 	void Start () {
@@ -50,11 +56,12 @@ public class PlayerScript : MonoBehaviour {
 	}
 
 	void Update () {
-		ShootTheArrow ();
+		//ShootTheArrow ();
 	}
 
 	void FixedUpdate () {
 		PlayerWalkKeyboard ();
+		MoveThePlayer ();
 	}
 
 	public void PlayerShootOnce (bool shootOnce) {
@@ -67,7 +74,7 @@ public class PlayerScript : MonoBehaviour {
 
 	public void ShootTheArrow () {
 		// If the left mouse button is pressed
-		if (Input.GetMouseButtonDown (0)) {
+		if (GameplayController.instance.levelInProgress) {
 			if (shootOnce) {
 				shootOnce = false;
 				StartCoroutine (PlayTheShootAnimation ());
@@ -91,6 +98,70 @@ public class PlayerScript : MonoBehaviour {
 
 	public void StopMoving () {
 		moveLeft = moveRight = false;
+	}
+
+	public void MoveThePlayerLeft () {
+		moveLeft = true;
+		moveRight = false;
+	}
+
+	public void MoveThePlayerRight () {
+		moveLeft = false;
+		moveRight = true;
+	}
+
+	void MoveThePlayer () {
+		if (GameplayController.instance.levelInProgress) {
+			if (moveLeft) {
+				MoveLeft ();
+			}
+
+			if (moveRight) {
+				MoveRight ();
+			}
+		}
+	}
+
+	void MoveRight () {
+		float force = 0.0f;
+		float velocity = Mathf.Abs (myRigidBody.velocity.x);
+
+		float h = Input.GetAxis ("Horizontal");
+
+		if (canWalk) {
+				if (velocity < maxVelocity) {
+					force = speed;
+				}
+
+				Vector3 scale = transform.localScale;
+				scale.x = 1.0f;
+				transform.localScale = scale;
+
+				animator.SetBool ("Walk", true);
+		}
+
+		myRigidBody.AddForce (new Vector2 (force, 0));
+	}
+
+	void MoveLeft () {
+		float force = 0.0f;
+		float velocity = Mathf.Abs (myRigidBody.velocity.x);
+
+		float h = Input.GetAxis ("Horizontal");
+
+		if (canWalk) {
+				if (velocity < maxVelocity) {
+					force = -speed;
+				}
+
+				Vector3 scale = transform.localScale;
+				scale.x = -1.0f;
+				transform.localScale = scale;
+
+				animator.SetBool ("Walk", true);
+		}
+
+		myRigidBody.AddForce (new Vector2 (force, 0));
 	}
 
 	void PlayerWalkKeyboard () {

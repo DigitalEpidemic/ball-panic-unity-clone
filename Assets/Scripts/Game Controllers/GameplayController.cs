@@ -33,7 +33,7 @@ public class GameplayController : MonoBehaviour {
 
 	public int playerLives, playerScore, coins;
 
-	private bool isGamePaused, hasLevelStarted, levelInProgress, countDownLevel;
+	public bool isGamePaused, hasLevelStarted, levelInProgress, countDownLevel;
 
 	[SerializeField]
 	private GameObject[] endOfLevelRewards;
