@@ -183,10 +183,12 @@ public class LevelController : MonoBehaviour {
 	}
 
 	public void GoToMainMenu () {
+		MusicController.instance.PlayClickClip ();
 		SceneManager.LoadScene ("MainMenu");
 	}
 
 	public void GoBackButton () {
+		MusicController.instance.PlayClickClip ();
 		SceneManager.LoadScene ("PlayerMenu");
 	}
 

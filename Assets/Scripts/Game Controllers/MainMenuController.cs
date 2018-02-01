@@ -122,4 +122,9 @@ public class MainMenuController : MonoBehaviour {
 		SceneManager.LoadScene ("PlayerMenu");
 	}
 
+	public void ShopButton () {
+		MusicController.instance.PlayClickClip ();
+		SceneManager.LoadScene ("ShopMenu");
+	}
+
 } // MainMenuController

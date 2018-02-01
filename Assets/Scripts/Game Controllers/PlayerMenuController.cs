@@ -439,10 +439,12 @@ public class PlayerMenuController : MonoBehaviour {
 	}
 
 	public void GoToLevelMenu () {
+		MusicController.instance.PlayClickClip ();
 		SceneManager.LoadScene ("LevelMenu");
 	}
 
 	public void GoToMainMenu () {
+		MusicController.instance.PlayClickClip ();
 		SceneManager.LoadScene ("MainMenu");
 	}
 

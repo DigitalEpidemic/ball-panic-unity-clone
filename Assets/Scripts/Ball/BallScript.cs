@@ -275,8 +275,8 @@ public class BallScript : MonoBehaviour {
 				PlayerScript.instance.DestroyShield ();
 			} else {
 				if (!PlayerScript.instance.isInvincible) {
-					//Destroy (target.gameObject);
-					//GameplayController.instance.PlayerDied ();
+					Destroy (target.gameObject);
+					GameplayController.instance.PlayerDied ();
 				}
 			}
 		}
