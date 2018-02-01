@@ -46,7 +46,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4426419804775514
 Transform:
   m_ObjectHideFlags: 1
@@ -163,6 +163,8 @@ MonoBehaviour:
   doubleArrows: 0
   singleStickyArrow: 0
   doubleStickyArrows: 0
+  shootFirstArrow: 0
+  shootSecondArrow: 0
 --- !u!212 &212087393128413944
 SpriteRenderer:
   m_ObjectHideFlags: 1

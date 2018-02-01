@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212539896526765902}
   - component: {fileID: 50460153850853496}
   - component: {fileID: 58786917120694322}
+  - component: {fileID: 114067531762015370}
   m_Layer: 10
   m_Name: Shield Collectable
   m_TagString: Shield
@@ -71,12 +72,23 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.23
+--- !u!114 &114067531762015370
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1763790874876598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec4c54fcbcebc5c41beca8a11279367f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212539896526765902
 SpriteRenderer:
   m_ObjectHideFlags: 1

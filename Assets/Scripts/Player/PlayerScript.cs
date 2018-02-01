@@ -42,6 +42,9 @@ public class PlayerScript : MonoBehaviour {
 
 	public bool hasShield, isInvincible, singleArrow, doubleArrows, singleStickyArrow, doubleStickyArrows, shootFirstArrow, shootSecondArrow;
 
+	public delegate void Explode (bool touchedGoldBall);
+	public static event Explode explode;
+
 	void Awake () {
 		if (instance == null) {
 			instance = this;
@@ -393,6 +396,9 @@ public class PlayerScript : MonoBehaviour {
 		}
 
 		if (target.tag == "Dynamite") {
+			if (explode != null) {
+				explode (false);
+			}
 		}
 
 	}

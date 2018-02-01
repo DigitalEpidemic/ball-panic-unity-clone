@@ -97,6 +97,17 @@ MonoBehaviour:
   popSounds:
   - {fileID: 8300000, guid: 6672b090df648fc45812424617f24444, type: 3}
   - {fileID: 8300000, guid: 3c68c56f100ba604fb32eb553d274a91, type: 3}
+  x: 0
+  y: 0
+  collectableItems:
+  - {fileID: 1630430751470058, guid: 68ba775c364b5524dbd109a528b268a9, type: 2}
+  - {fileID: 1071314053034292, guid: f24e807c11747734cab75c99253f51c9, type: 2}
+  - {fileID: 1098643758607166, guid: 1ef07c45bf7cd6a48acd02fb15b3122e, type: 2}
+  - {fileID: 1946977365958146, guid: 8990c59989427f447aa68651f5dec16f, type: 2}
+  - {fileID: 1907670813108768, guid: 3f6fd6f56912b374594dd4b956ffc92b, type: 2}
+  - {fileID: 1763790874876598, guid: a68cbf6d1b211504cbfe6ec7fada6870, type: 2}
+  - {fileID: 1907670813108768, guid: 3f6fd6f56912b374594dd4b956ffc92b, type: 2}
+  - {fileID: 1160805730138662, guid: e25b376d8de08a64eaa886cc9c6517e1, type: 2}
 --- !u!212 &212075327664507290
 SpriteRenderer:
   m_ObjectHideFlags: 1

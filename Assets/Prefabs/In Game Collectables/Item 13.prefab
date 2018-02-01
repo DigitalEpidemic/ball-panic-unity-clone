@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212144368256977166}
   - component: {fileID: 50667472330124636}
   - component: {fileID: 61079373749162674}
+  - component: {fileID: 114695390819125836}
   m_Layer: 10
   m_Name: Item 13
   m_TagString: InGameCollectable
@@ -87,6 +88,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.75, y: 0.51}
   m_EdgeRadius: 0
+--- !u!114 &114695390819125836
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1198993904219724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec4c54fcbcebc5c41beca8a11279367f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212144368256977166
 SpriteRenderer:
   m_ObjectHideFlags: 1

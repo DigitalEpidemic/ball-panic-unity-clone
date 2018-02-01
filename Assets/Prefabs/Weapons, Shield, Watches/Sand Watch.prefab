@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212468301479340048}
   - component: {fileID: 50748940383993842}
   - component: {fileID: 61246532678995480}
+  - component: {fileID: 114948999489799486}
   m_Layer: 10
   m_Name: Sand Watch
   m_TagString: SandWatch
@@ -87,6 +88,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.37, y: 0.55}
   m_EdgeRadius: 0
+--- !u!114 &114948999489799486
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1946313131126772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec4c54fcbcebc5c41beca8a11279367f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212468301479340048
 SpriteRenderer:
   m_ObjectHideFlags: 1
