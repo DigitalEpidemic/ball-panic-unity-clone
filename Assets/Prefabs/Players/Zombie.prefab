@@ -156,7 +156,7 @@ MonoBehaviour:
   - {fileID: 1077818918026310, guid: 87bc67d75a0f5c94ea9f87b7c954290a, type: 2}
   clip: {fileID: 7400000, guid: 7ffdecf4377b1d84ca07ddb91a01ba63, type: 2}
   shootClip: {fileID: 8300000, guid: 535bbe5217e959f46b82c48f0ac9f465, type: 3}
-  shield: {fileID: 0}
+  shield: {fileID: 1516540984946266}
   hasShield: 0
   isInvincible: 0
   singleArrow: 0

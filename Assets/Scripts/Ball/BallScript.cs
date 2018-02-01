@@ -271,11 +271,13 @@ public class BallScript : MonoBehaviour {
 			moveRight = false;
 		}
 		if (target.tag == "Player") {
-			PlayerScript.instance.DestroyShield ();
-		} else {
-			if (!PlayerScript.instance.isInvincible) {
-				Destroy (target.gameObject);
-				GameplayController.instance.PlayerDied ();
+			if (PlayerScript.instance.hasShield) {
+				PlayerScript.instance.DestroyShield ();
+			} else {
+				if (!PlayerScript.instance.isInvincible) {
+					//Destroy (target.gameObject);
+					//GameplayController.instance.PlayerDied ();
+				}
 			}
 		}
 	}

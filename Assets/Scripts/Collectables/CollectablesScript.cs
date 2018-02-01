@@ -23,7 +23,7 @@ public class CollectablesScript : MonoBehaviour {
 			Vector3 temp = target.transform.position;
 			temp.y += 0.8f;
 			transform.position = new Vector2 (transform.position.x, temp.y);
-			myRigidBody.isKinematic = true;
+			myRigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
 		}
 
 		if (target.tag == "Player") {
