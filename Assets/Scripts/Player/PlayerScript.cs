@@ -122,6 +122,7 @@ public class PlayerScript : MonoBehaviour {
 
 		Vector3 bottomBrick = GameObject.FindGameObjectWithTag ("BottomBrick").transform.position;
 		Vector3 temp = transform.position;
+		temp.x += 2.2f;
 
 		switch (gameObject.name) {
 		case "Homosapien(Clone)":
@@ -275,7 +276,7 @@ public class PlayerScript : MonoBehaviour {
 					force = speed;
 				}
 
-				
+				scale = transform.localScale;
 				scale.x = 1.0f;
 				transform.localScale = scale;
 
