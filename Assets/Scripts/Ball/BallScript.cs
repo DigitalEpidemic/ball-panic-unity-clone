@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//[ExecuteInEditMode]
 
 public class BallScript : MonoBehaviour {
 
@@ -51,6 +52,7 @@ public class BallScript : MonoBehaviour {
 
 	void Update () {
 		MoveBall ();
+//		transform.position = Camera.main.ViewportToWorldPoint (new Vector3 (x, y, 5));
 	}
 
 	void InstantiateBalls () {
