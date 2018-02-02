@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ArrowScript : MonoBehaviour {
 
-	private float arrowSpeed = 7.0f;
+	private float arrowSpeed = 8.0f;
 	private bool canShootStickyArrow;
 
 	[SerializeField]

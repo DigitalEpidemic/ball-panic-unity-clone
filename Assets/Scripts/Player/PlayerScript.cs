@@ -163,9 +163,9 @@ public class PlayerScript : MonoBehaviour {
 		if (GameplayController.instance.levelInProgress) {
 			if (shootOnce) {
 				if (arrow == "Arrow") {
-					Instantiate (arrows [0], new Vector3 (transform.position.x, height, 0), Quaternion.identity);
+					Instantiate (arrows [0], new Vector3 (transform.position.x + 0.4f, height, 0), Quaternion.identity);
 				} else if (arrow == "StickyArrow") {
-					Instantiate (arrows [2], new Vector3 (transform.position.x, height, 0), Quaternion.identity);
+					Instantiate (arrows [2], new Vector3 (transform.position.x + 0.4f, height, 0), Quaternion.identity);
 				}
 
 				StartCoroutine (PlayTheShootAnimation ());
@@ -174,9 +174,9 @@ public class PlayerScript : MonoBehaviour {
 
 			} else if (shootTwice) {
 				if (arrow == "Arrow") {
-					Instantiate (arrows [1], new Vector3 (transform.position.x, height, 0), Quaternion.identity);
+					Instantiate (arrows [1], new Vector3 (transform.position.x + 0.4f, height, 0), Quaternion.identity);
 				} else if (arrow == "StickyArrow") {
-					Instantiate (arrows [3], new Vector3 (transform.position.x, height, 0), Quaternion.identity);
+					Instantiate (arrows [3], new Vector3 (transform.position.x + 0.4f, height, 0), Quaternion.identity);
 				}
 
 				StartCoroutine (PlayTheShootAnimation ());
