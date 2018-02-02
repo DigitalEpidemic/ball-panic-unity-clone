@@ -170,8 +170,8 @@ public class LevelController : MonoBehaviour {
 
 		LoadingScreen.instance.PlayLoadingScreen ();
 		GameController.instance.isGameStartedFromLevelMenu = true;
-//		SceneManager.LoadScene (level);
-		SceneManager.LoadScene("Level Setup Scene");
+		SceneManager.LoadScene (level);
+//		SceneManager.LoadScene("Level Setup Scene");
 	}
 
 	public void OpenCoinShop () {
