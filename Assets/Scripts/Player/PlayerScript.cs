@@ -45,6 +45,8 @@ public class PlayerScript : MonoBehaviour {
 	public delegate void Explode (bool touchedGoldBall);
 	public static event Explode explode;
 
+	public Vector3 scale;
+
 	void Awake () {
 		if (instance == null) {
 			instance = this;
@@ -160,28 +162,55 @@ public class PlayerScript : MonoBehaviour {
 
 	public void ShootTheArrow () {
 		// If the left mouse button is pressed
-		if (GameplayController.instance.levelInProgress) {
-			if (shootOnce) {
-				if (arrow == "Arrow") {
-					Instantiate (arrows [0], new Vector3 (transform.position.x + 0.4f, height, 0), Quaternion.identity);
-				} else if (arrow == "StickyArrow") {
-					Instantiate (arrows [2], new Vector3 (transform.position.x + 0.4f, height, 0), Quaternion.identity);
+		if (scale.x == 1.0f) {
+			if (GameplayController.instance.levelInProgress) {
+				if (shootOnce) {
+					if (arrow == "Arrow") {
+						Instantiate (arrows [0], new Vector3 (transform.position.x + 0.4f, height, 0), Quaternion.identity);
+					} else if (arrow == "StickyArrow") {
+						Instantiate (arrows [2], new Vector3 (transform.position.x + 0.4f, height, 0), Quaternion.identity);
+					}
+
+					StartCoroutine (PlayTheShootAnimation ());
+					shootOnce = false;
+					shootFirstArrow = true;
+
+				} else if (shootTwice) {
+					if (arrow == "Arrow") {
+						Instantiate (arrows [1], new Vector3 (transform.position.x + 0.4f, height, 0), Quaternion.identity);
+					} else if (arrow == "StickyArrow") {
+						Instantiate (arrows [3], new Vector3 (transform.position.x + 0.4f, height, 0), Quaternion.identity);
+					}
+
+					StartCoroutine (PlayTheShootAnimation ());
+					shootTwice = false;
+					shootSecondArrow = true;
 				}
+			}
+		} else if (scale.x == -1.0f) {
+			if (GameplayController.instance.levelInProgress) {
+				if (shootOnce) {
+					if (arrow == "Arrow") {
+						Instantiate (arrows [0], new Vector3 (transform.position.x - 0.4f, height, 0), Quaternion.identity);
+					} else if (arrow == "StickyArrow") {
+						Instantiate (arrows [2], new Vector3 (transform.position.x - 0.4f, height, 0), Quaternion.identity);
+					}
 
-				StartCoroutine (PlayTheShootAnimation ());
-				shootOnce = false;
-				shootFirstArrow = true;
+					StartCoroutine (PlayTheShootAnimation ());
+					shootOnce = false;
+					shootFirstArrow = true;
 
-			} else if (shootTwice) {
-				if (arrow == "Arrow") {
-					Instantiate (arrows [1], new Vector3 (transform.position.x + 0.4f, height, 0), Quaternion.identity);
-				} else if (arrow == "StickyArrow") {
-					Instantiate (arrows [3], new Vector3 (transform.position.x + 0.4f, height, 0), Quaternion.identity);
+				} else if (shootTwice) {
+					if (arrow == "Arrow") {
+						Instantiate (arrows [1], new Vector3 (transform.position.x - 0.4f, height, 0), Quaternion.identity);
+					} else if (arrow == "StickyArrow") {
+						Instantiate (arrows [3], new Vector3 (transform.position.x - 0.4f, height, 0), Quaternion.identity);
+					}
+
+					StartCoroutine (PlayTheShootAnimation ());
+					shootTwice = false;
+					shootSecondArrow = true;
 				}
-
-				StartCoroutine (PlayTheShootAnimation ());
-				shootTwice = false;
-				shootSecondArrow = true;
 			}
 		}
 	}
@@ -246,7 +275,7 @@ public class PlayerScript : MonoBehaviour {
 					force = speed;
 				}
 
-				Vector3 scale = transform.localScale;
+				
 				scale.x = 1.0f;
 				transform.localScale = scale;
 
@@ -267,7 +296,7 @@ public class PlayerScript : MonoBehaviour {
 					force = -speed;
 				}
 
-				Vector3 scale = transform.localScale;
+				scale = transform.localScale;
 				scale.x = -1.0f;
 				transform.localScale = scale;
 
@@ -290,7 +319,7 @@ public class PlayerScript : MonoBehaviour {
 					force = speed;
 				}
 
-				Vector3 scale = transform.localScale;
+				scale = transform.localScale;
 				scale.x = 1.0f;
 				transform.localScale = scale;
 
@@ -302,7 +331,7 @@ public class PlayerScript : MonoBehaviour {
 					force = -speed;
 				}
 
-				Vector3 scale = transform.localScale;
+				scale = transform.localScale;
 				scale.x = -1.0f;
 				transform.localScale = scale;
 
